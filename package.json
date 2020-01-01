@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=app:* nodemon ./bin/www"
+    "start": "DEBUG=app:* nodemon index.js",
+    "start:debug": "node --inspect-brk=9229 index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

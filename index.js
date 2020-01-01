@@ -4,10 +4,10 @@
  * Module dependencies.
  */
 
-require('dotenv').config();
+var app = require('./app');
 var debug = require('debug')('app:*');
 var http = require('http');
-var app = require('.');
+require('dotenv').config();
 
 /**
  * Get port from environment and store in Express.
@@ -31,6 +31,7 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+console.log(`listening at port ${port}`);
 
 /**
  * Normalize a port into a number, string, or false.
